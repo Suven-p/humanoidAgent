@@ -1,0 +1,10 @@
+{{ define "header" }}{{ partial "page-header.html" . }}{{ end }}
+{{ define "main" }}
+<article class="center cf pv5 measure-wide-l">
+    <ul>
+        {{ range os.ReadDir "content" }}
+        <li><a href="/{{ .Name }}">{{ .Name }}</a></li>
+        {{ end }}
+    </ul>
+</article>
+{{ end }}
